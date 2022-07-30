@@ -2,23 +2,19 @@ import styled from "styled-components";
 
 export const List = styled.ul`
   display: flex;
-  /* width: 90%; */
-  height: 45%;
-  /* max-height: 900px;
-  max-width: 900px; */
-  /* border: 1px solid red; */
+  height: 50%;
   overflow-x: scroll;
   margin-bottom: 1rem;
   box-sizing: content-box;
 
-  @media screen and (min-width: 800px) {
+  @media screen and (min-width: 1050px) {
     display: flex;
     height: 100%;
-    width: 70%;
+    width: 55%;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    border: 1px solid red;
-    margin-right: 4rem;
+    margin-right: 3rem;
+    margin-top: 0.5rem;
   }
 `;

@@ -8,13 +8,19 @@ export const Header = styled.header`
   background-color: var(--color-light-gray);
   height: 10%;
   margin-bottom: 0.938rem;
-  @media screen and (min-width: 800px) {
+  @media screen and (min-width: 1050px) {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-between;
   }
 `;
 
-export const TitleContainer = styled.div``;
+export const TitleContainer = styled.div`
+  @media screen and (min-width: 1050px) {
+    margin-left: 14rem;
+  }
+`;
 
 export const Title = styled.h1`
   font-family: "Inter";
@@ -41,9 +47,12 @@ export const InputContainer = styled.form`
   padding: 0px 10px 0px 15px;
   height: 50%;
   margin-bottom: 0.875rem;
-  @media screen and (min-width: 800px) {
-    width: 30%;
+  @media screen and (min-width: 1050px) {
+    display: flex;
+    margin-right: 13rem;
+    width: 20.5%;
     height: 90%;
+    margin-top: 0.7%;
   }
 `;
 

@@ -9,9 +9,10 @@
 .UlSectionContainer {
   width: 100vw;
   height: 100vh;
+  margin-left: 2rem;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1050px) {
   .App {
     display: flex;
   }

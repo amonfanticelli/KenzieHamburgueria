@@ -8,9 +8,10 @@ export const ListElement = styled.li`
   width: 300px;
   height: 100%;
   margin-right: 1.25rem;
-  @media screen and (min-width: 800px) {
-    width: 25%;
-    height: 45%;
+  min-width: 260px;
+  @media screen and (min-width: 1050px) {
+    width: 31%;
+    height: 47%;
     margin-bottom: 0.75rem;
   }
 `;
@@ -32,7 +33,7 @@ export const Img = styled.img`
   height: 150px; */
   /* max-width: 180px;
   max-height: 180px; */
-  @media screen and (min-width: 800px) {
+  @media screen and (min-width: 1050px) {
     width: 66%;
     height: 100%;
   }
@@ -80,4 +81,9 @@ export const Button = styled.button`
   border-radius: 8px;
   cursor: pointer;
   margin-bottom: 1rem;
+  &:hover {
+    transition: 0.8s;
+    background-color: white;
+    color: #27ae60;
+  }
 `;

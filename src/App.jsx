@@ -4,13 +4,19 @@ import BurgerList from "./components/BurgerList";
 import BurgerCart from "./components/BurgerCart";
 import { useEffect, useState } from "react";
 import api from "./services/api";
+import React from "react";
+import { ToastContainer, toast } from "react-toastify";
+// import "react-toastify/dist/react-toastify.css";
 
 function App() {
   const [burgers, setBurgers] = useState([]);
   const [cartItens, setCartItens] = useState([]);
 
+  const notify = () => toast("Wow so easy !");
+
   const addCartItem = (cartItem) => {
     setCartItens((oldCartItens) => [...oldCartItens, cartItem]);
+    notify();
   };
 
   const removeCartItem = (id) => {

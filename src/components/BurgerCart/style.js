@@ -61,6 +61,7 @@ export const CartList = styled.ul`
   flex-wrap: wrap;
 
   .elementListCart {
+    margin-bottom: 0.8rem;
     display: flex;
     height: 40%;
     width: 100%;

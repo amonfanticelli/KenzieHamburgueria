@@ -117,6 +117,9 @@ export const CartList = styled.ul`
       height: 20%;
       background-color: Transparent;
       cursor: pointer;
+      &:hover {
+        color: green;
+      }
     }
   }
 `;
@@ -132,6 +135,7 @@ export const PriceContainer = styled.div`
   background: #f5f5f5;
 `;
 export const TotalContainer = styled.div`
+  margin-top: 0.5rem;
   display: flex;
   justify-content: space-between;
 `;
@@ -153,7 +157,8 @@ export const PriceParagraph = styled.p`
 `;
 export const RemoveAllButton = styled.button`
   width: 90%;
-  margin-left: 0.8rem;
+  margin-left: 1.2rem;
+  margin-bottom: 0.5rem;
   background: #e0e0e0;
   height: 3rem;
   border: 2px solid #e0e0e0;

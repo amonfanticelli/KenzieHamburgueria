@@ -12,18 +12,22 @@ function App() {
   const [burgers, setBurgers] = useState([]);
   const [cartItens, setCartItens] = useState([]);
 
-  const notify = () =>
+  const notifyAddCart = () =>
     toast.success("Adicionado ao carrinho!", { autoClose: 1000 });
+
+  const notifyRemoveFromCart = () =>
+    toast.error("Removido do carrinho!", { autoClose: 1000 });
 
   const addCartItem = (cartItem) => {
     setCartItens((oldCartItens) => [...oldCartItens, cartItem]);
-    notify();
+    notifyAddCart();
   };
 
   const removeCartItem = (id) => {
     const newList = cartItens.filter((item) => item.id !== id);
 
     setCartItens(newList);
+    notifyRemoveFromCart();
   };
 
   const removeAllCart = (id) => {

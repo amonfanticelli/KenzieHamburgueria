@@ -1,7 +1,24 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const appear = keyframes`
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  20% {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+`;
 
 export const Section = styled.section`
-  width: 90%;
+  width: 60%;
   height: 40%;
   display: flex;
   flex-direction: column;
@@ -9,7 +26,7 @@ export const Section = styled.section`
   @media screen and (min-width: 1050px) {
     margin-top: 1rem;
     margin-right: 2rem;
-    width: 20%;
+    width: 22%;
     height: 40%;
   }
 `;
@@ -50,7 +67,7 @@ export const CartList = styled.ul`
 
     .imgContainer {
       height: 100%;
-      width: 30%;
+      width: 25%;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -58,18 +75,21 @@ export const CartList = styled.ul`
       border-radius: 5px;
       margin-right: 0.625rem;
       max-height: 62px;
+      min-width: 50px;
+      animation: ${appear} 0.4s ease-out;
       .img {
         width: 60%;
         height: 100%;
+        min-width: 50px;
         /* width: 80px;
         height: 80px; */
       }
     }
     .titleContainer {
-      margin-right: 2rem;
+      margin-right: 1rem;
       height: 50%;
 
-      width: 40%;
+      width: 50%;
 
       h1 {
         font-style: normal;
@@ -101,7 +121,6 @@ export const CartList = styled.ul`
   }
 `;
 export const CartEmpty = styled.li``;
-export const CartAddItens = styled.li``;
 
 export const Line = styled.div`
   width: 100%;

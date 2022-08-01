@@ -14,7 +14,8 @@ export const List = styled.ul`
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    margin-right: 3rem;
+    margin-right: 11rem;
     margin-top: 0.5rem;
+    overflow-x: auto;
   }
 `;

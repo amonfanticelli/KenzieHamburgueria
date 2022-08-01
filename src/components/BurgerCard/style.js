@@ -10,7 +10,7 @@ export const ListElement = styled.li`
   margin-right: 1.25rem;
   min-width: 260px;
   @media screen and (min-width: 1050px) {
-    width: 31%;
+    width: 25%;
     height: 47%;
     margin-bottom: 0.75rem;
   }

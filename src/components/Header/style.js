@@ -18,7 +18,7 @@ export const Header = styled.header`
 
 export const TitleContainer = styled.div`
   @media screen and (min-width: 1050px) {
-    margin-left: 14rem;
+    margin-left: 15.5rem;
   }
 `;
 
@@ -49,8 +49,8 @@ export const InputContainer = styled.form`
   margin-bottom: 0.875rem;
   @media screen and (min-width: 1050px) {
     display: flex;
-    margin-right: 13rem;
-    width: 20.5%;
+    margin-right: 8.3rem;
+    width: 22%;
     height: 90%;
     margin-top: 0.7%;
   }

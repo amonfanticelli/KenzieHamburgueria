@@ -4,7 +4,6 @@ import {
   CartTitle,
   CartList,
   CartEmpty,
-  CartAddItens,
   Line,
   PriceContainer,
   TotalContainer,
@@ -19,29 +18,34 @@ const BurgerCart = ({
   removeCartItem,
   removeAllCart,
 }) => {
+  console.log(cartItens);
   return (
     <Section>
       <TitleContainer>
         <CartTitle>Carrinho de compras</CartTitle>
       </TitleContainer>
       <CartList>
-        <CartEmpty>
-          <p>Sua sacola está vazia</p>
-          <p>Adicione Itens</p>
-        </CartEmpty>
-
-        {cartItens.map((cartItem) => (
-          <li className="elementListCart" key={cartItem.id}>
-            <div className="imgContainer">
-              <img className="img" src={cartItem.img} alt="" />
-            </div>
-            <div className="titleContainer">
-              <h1>{cartItem.name}</h1>
-              <h3 className="titleCategory">{cartItem.category}</h3>
-            </div>
-            <button onClick={() => removeCartItem(cartItem.id)}>Remover</button>
-          </li>
-        ))}
+        {cartItens.length > 0 ? (
+          cartItens.map((cartItem) => (
+            <li className="elementListCart" key={cartItem.id}>
+              <div className="imgContainer">
+                <img className="img" src={cartItem.img} alt="" />
+              </div>
+              <div className="titleContainer">
+                <h1>{cartItem.name}</h1>
+                <h3 className="titleCategory">{cartItem.category}</h3>
+              </div>
+              <button onClick={() => removeCartItem(cartItem.id)}>
+                Remover
+              </button>
+            </li>
+          ))
+        ) : (
+          <CartEmpty>
+            <p className="p1">Sua sacola está vazia</p>
+            <p className="p2">Adicione Itens</p>
+          </CartEmpty>
+        )}
       </CartList>
       <Line></Line>
       <PriceContainer>

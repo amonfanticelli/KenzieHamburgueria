@@ -123,7 +123,25 @@ export const CartList = styled.ul`
     }
   }
 `;
-export const CartEmpty = styled.li``;
+export const CartEmpty = styled.li`
+  .p1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    text-align: center;
+    color: #333333;
+    margin-bottom: 1rem;
+  }
+  .p2 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    color: #828282;
+    text-align: center;
+  }
+`;
 
 export const Line = styled.div`
   width: 100%;

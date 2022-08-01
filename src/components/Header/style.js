@@ -58,7 +58,9 @@ export const InputContainer = styled.form`
 
 export const Input = styled.input`
   background-color: var(--color-white);
-  width: 60%;
+  width: 100%;
+  height: 100%;
+  outline: none;
 `;
 
 export const Button = styled.button`
@@ -78,4 +80,9 @@ export const Button = styled.button`
   border: 2px solid #27ae60;
   border-radius: 8px;
   cursor: pointer;
+  &:hover {
+    transition: 0.8s;
+    background-color: white;
+    color: #27ae60;
+  }
 `;

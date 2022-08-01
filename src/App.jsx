@@ -16,11 +16,30 @@ function App() {
     toast.success("Adicionado ao carrinho!", { autoClose: 1000 });
 
   const notifyRemoveFromCart = () =>
-    toast.error("Removido do carrinho!", { autoClose: 1000 });
+    toast.error("Removido do carrinho!", {
+      autoClose: 1000,
+      position: "top-left",
+    });
+
+  const notifyAlreadyOnCart = () =>
+    toast.error("Você já possui esse item no carrinho!", { autoClose: 1000 });
 
   const addCartItem = (cartItem) => {
-    setCartItens((oldCartItens) => [...oldCartItens, cartItem]);
-    notifyAddCart();
+    const find = cartItens.find((item) => {
+      return item.id === cartItem.id;
+    });
+
+    !find
+      ? setCartItens((oldCartItens) => [...oldCartItens, cartItem])(
+          notifyAddCart()
+        )
+      : notifyAlreadyOnCart();
+    // if (!find) {
+    //   setCartItens((oldCartItens) => [...oldCartItens, cartItem]);
+    //   notifyAddCart();
+    // } else {
+    //   toast.error("Você já possui esse item no carrinho!");
+    // }
   };
 
   const removeCartItem = (id) => {

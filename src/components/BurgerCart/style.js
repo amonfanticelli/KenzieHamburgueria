@@ -18,7 +18,7 @@ const appear = keyframes`
 `;
 
 export const Section = styled.section`
-  width: 60%;
+  width: 80%;
   height: 40%;
   display: flex;
   flex-direction: column;

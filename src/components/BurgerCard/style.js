@@ -86,6 +86,7 @@ export const Button = styled.button`
   background: var(--color-green-primary);
   border: 2px solid #27ae60;
   border-radius: 8px;
+  max-height: 26px;
   cursor: pointer;
   margin-bottom: 1rem;
   &:hover {

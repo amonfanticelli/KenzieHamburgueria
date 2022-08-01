@@ -29,17 +29,17 @@ function App() {
       return item.id === cartItem.id;
     });
 
-    !find
-      ? setCartItens((oldCartItens) => [...oldCartItens, cartItem])(
-          notifyAddCart()
-        )
-      : notifyAlreadyOnCart();
-    // if (!find) {
-    //   setCartItens((oldCartItens) => [...oldCartItens, cartItem]);
-    //   notifyAddCart();
-    // } else {
-    //   toast.error("Você já possui esse item no carrinho!");
-    // }
+    // !find
+    //   ? setCartItens((oldCartItens) => [...oldCartItens, cartItem])(
+    //       notifyAddCart()
+    //     )
+    //   : notifyAlreadyOnCart();
+    if (!find) {
+      setCartItens((oldCartItens) => [...oldCartItens, cartItem]);
+      notifyAddCart();
+    } else {
+      notifyAlreadyOnCart();
+    }
   };
 
   const removeCartItem = (id) => {

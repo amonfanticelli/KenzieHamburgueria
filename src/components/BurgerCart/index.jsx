@@ -47,18 +47,24 @@ const BurgerCart = ({
           </CartEmpty>
         )}
       </CartList>
-      <Line></Line>
-      <PriceContainer>
-        <TotalContainer>
-          <TotalSpan>Total</TotalSpan>
-          <PriceParagraph>
-            R${totalPrice.toFixed(2).replace(".", ",")}{" "}
-          </PriceParagraph>
-        </TotalContainer>
-        <RemoveAllButton onClick={() => removeAllCart(cartItens)}>
-          Remover todos
-        </RemoveAllButton>
-      </PriceContainer>
+      {cartItens.length > 0 ? (
+        <>
+          <Line></Line>
+          <PriceContainer>
+            <TotalContainer>
+              <TotalSpan>Total</TotalSpan>
+              <PriceParagraph>
+                R${totalPrice.toFixed(2).replace(".", ",")}{" "}
+              </PriceParagraph>
+            </TotalContainer>
+            <RemoveAllButton onClick={() => removeAllCart(cartItens)}>
+              Remover todos
+            </RemoveAllButton>
+          </PriceContainer>
+        </>
+      ) : (
+        <></>
+      )}
     </Section>
   );
 };

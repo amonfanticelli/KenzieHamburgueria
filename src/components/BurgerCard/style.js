@@ -9,7 +9,8 @@ export const ListElement = styled.li`
   height: 100%;
   margin-right: 1.25rem;
   min-width: 260px;
-  min-height: 300px;
+  min-height: 400px;
+  max-height: 400px;
   max-width: 260px;
   &:hover {
     border: 2px solid green;

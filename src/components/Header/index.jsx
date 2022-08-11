@@ -1,5 +1,6 @@
 import {
   Header,
+  AllContainer,
   TitleContainer,
   Title,
   Span,
@@ -17,16 +18,18 @@ const BurgerHeader = ({ search }) => {
 
   return (
     <Header>
-      <TitleContainer>
-        <Title>
-          Burguer <Span>Kenzie</Span>
-        </Title>
-      </TitleContainer>
+      <AllContainer>
+        <TitleContainer>
+          <Title>
+            Burguer <Span>Kenzie</Span>
+          </Title>
+        </TitleContainer>
 
-      <InputContainer onSubmit={formSubmit}>
-        <Input name="name" type="text" placeholder="Buscar produtos" />
-        <Button type="submit">Buscar</Button>
-      </InputContainer>
+        <InputContainer onSubmit={formSubmit}>
+          <Input name="name" type="text" placeholder="Buscar produtos" />
+          <Button type="submit">Buscar</Button>
+        </InputContainer>
+      </AllContainer>
     </Header>
   );
 };

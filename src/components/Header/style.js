@@ -5,20 +5,39 @@ export const Header = styled.header`
   display: flex;
   flex-direction: column;
   align-items: center;
+
   background-color: var(--color-light-gray);
   height: 10%;
+  min-height: 90px;
   margin-bottom: 0.938rem;
+
   @media screen and (min-width: 1050px) {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-content: space-between;
+    align-content: center;
+  }
+`;
+
+export const AllContainer = styled.div`
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  min-height: 90px;
+
+  @media screen and (min-width: 1050px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 74.5%;
   }
 `;
 
 export const TitleContainer = styled.div`
   @media screen and (min-width: 1050px) {
-    margin-left: 15.5rem;
   }
 `;
 
@@ -41,6 +60,7 @@ export const InputContainer = styled.form`
   border: 2px solid #e0e0e0;
   border-radius: 8px;
   width: 90%;
+  max-height: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -49,10 +69,10 @@ export const InputContainer = styled.form`
   margin-bottom: 0.875rem;
   @media screen and (min-width: 1050px) {
     display: flex;
-    margin-right: 8.3rem;
-    width: 22%;
+
+    width: 25%;
     height: 90%;
-    margin-top: 0.7%;
+    margin-top: 0.8%;
   }
 `;
 
@@ -60,6 +80,7 @@ export const Input = styled.input`
   background-color: var(--color-white);
   width: 100%;
   height: 100%;
+
   outline: none;
 `;
 

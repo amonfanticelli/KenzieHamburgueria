@@ -20,14 +20,18 @@ const appear = keyframes`
 export const Section = styled.section`
   width: 80%;
   height: 40%;
+  min-height: 300px;
   display: flex;
   flex-direction: column;
 
   @media screen and (min-width: 1050px) {
     margin-top: 1rem;
-    margin-right: 2rem;
-    width: 22%;
-    height: 40%;
+    margin-right: 3rem;
+    width: 21.4%;
+    height: 45%;
+    min-height: 380px;
+    max-height: 380px;
+    min-width: 270px;
   }
 `;
 export const TitleContainer = styled.div`

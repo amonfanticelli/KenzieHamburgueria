@@ -2,15 +2,15 @@ import "./App.css";
 import BurgerHeader from "./components/Header";
 import BurgerList from "./components/BurgerList";
 import BurgerCart from "./components/BurgerCart";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import api from "./services/api";
-import React from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const [burgers, setBurgers] = useState([]);
   const [cartItens, setCartItens] = useState([]);
+  // const [search, setSearch] = useState([]);
 
   const notifyAddCart = () =>
     toast.success("Adicionado ao carrinho!", { autoClose: 1000 });
@@ -69,11 +69,10 @@ function App() {
 
   useEffect(() => {
     search();
-    //   api.get().then((response) => {
-    //     console.log(response);
-    //     setBurgers(response.data);
-
-    //   });
+    // api.get("products").then((response) => {
+    // console.log(response);
+    //   setBurgers(response.data);
+    // });
   }, []);
 
   return (

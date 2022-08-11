@@ -17,6 +17,7 @@ export const ListElement = styled.li`
     transition: 0.2s;
   }
   @media screen and (min-width: 1050px) {
+    min-width: 300px;
     width: 25%;
     height: 47%;
     margin-bottom: 0.75rem;

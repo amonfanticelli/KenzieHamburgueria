@@ -18,7 +18,6 @@ const BurgerCart = ({
   removeCartItem,
   removeAllCart,
 }) => {
-  console.log(cartItens);
   return (
     <Section>
       <TitleContainer>

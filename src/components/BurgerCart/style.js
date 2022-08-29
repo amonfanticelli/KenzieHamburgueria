@@ -80,6 +80,7 @@ export const CartList = styled.ul`
       border-radius: 5px;
       margin-right: 0.625rem;
       max-height: 62px;
+
       min-width: 50px;
       animation: ${appear} 0.4s ease-out;
       .img {

@@ -8,7 +8,7 @@ export const ListElement = styled.li`
   width: 300px;
   height: 100%;
   margin-right: 1.25rem;
-  min-width: 260px;
+  min-width: 200px;
   min-height: 400px;
   max-height: 400px;
   max-width: 260px;
@@ -17,9 +17,10 @@ export const ListElement = styled.li`
     transition: 0.2s;
   }
   @media screen and (min-width: 1050px) {
-    min-width: 300px;
+    min-width: 250px;
     width: 25%;
-    height: 47%;
+
+    min-height: 250px;
     margin-bottom: 0.75rem;
   }
 `;
